@@ -1,0 +1,59 @@
+
+- True/False: Working with character strings in C is unpleasant. Explain.
+  True, because they are so simplistic; they are null-terminated character arrays. 
+  But since the language does not have many features, I found that I had to write 
+  lots of error-prone code myself to support different features of string handling, 
+  which made working with character strings in C very unpleasant when I encountered 
+  undefined behavior.   
+
+- What is your favorite programming language? explain.
+  My favorite programming language would have to be Python because I am the most 
+  familiar with it. It was a great first programming language to learn as the syntax 
+  was very beginner-friendly and easy to read. It is also efficient and reliable, 
+  and I was able to gain a lot of experience creating applications and mini-games 
+  in the language.
+
+- What is your least favorite programming language? explain.
+  My least favorite programming language is C. Perhaps it will change as I gain 
+  more experience in this class, but I found the syntax to be very difficult to 
+  read and I still haven't caught on to the rules of the language. Pointers are 
+  also a large component of C programs and I am still a little confused by them.
+
+- Read about statically typed vs dynamically typed programming languages
+  and explain the difference.
+  In statically typed languages, each variable/expression is already known at 
+  compile time while in dynamically typed languages, variables/expressions can 
+  be defined at run time and may take any type of values at runtime. C, C++, 
+  and Java are examples of statically typed languages and Ruby, PHP, JavaScript 
+  and Python are prime examples of dynamically typed languages (Source 1).
+
+- Read about strongly typed vs. weakly typed programming languages
+  and explain the difference
+  A strongly typed language is one that demands the specification of data types, 
+  meaning that they do not allow implicit conversions between different types 
+  either. Meanwhile, a weakly typed language does not require the explicit 
+  specification of different types of objects and variables and can make the 
+  conversions betwween different types implicitly. Python is an example of a 
+  strongly-types language while JavaScript is an example of a weakly typed language
+  (Source 2). 
+
+- Read about interpreted vs. compiled programming languages and
+  explain the difference
+  In compiled languages, the program (once compiled) is expressed in the instructions 
+  of the target machine; this machine code is undecipherable by humans. Meanwhile,
+  in an interpreted langauage, the source code is not directly
+  translated by the target machine and is instead read and interpreted
+  by a different program known as the interpreter (Source 3).
+
+- How do you classify the following languages in terms of the above?
+      * Python: dynamically-typed (variables can be defined at run time), strongly-typed (type matters when performing operations), and an interpreted langauage (uses an interpreter).
+      * Java: statically-typed (variables known at compile time), strongly-typed(demands the declaration of every variable with a data type), and both a compiled and interpreted language (source code is intially compiled into a binary byte-code, which typically runs on a software-based interpreter).
+      * C: statically-typed (variable types are known at compile time (can convert data types through a cast and without compiler errors), and a compiled language (uses an interpreter).
+      * C++: statically-typed (auto type specifier because auto denotes that the type will be inferred by the compiler at compile time), both strongly and weakly typed (built-in conversions for primitive types and with the option of using user-provided conversions via constructors or type-casts operators), and a compiled language.
+      * fun: dynamically-typed (variables can be defined at run time), strongly-typed (data type matters!), and an interpreted language :)
+
+Sources:
+1. https://docs.oracle.com/cd/E57471_01/bigData.100/extensions_bdd/src/cext_transform_typing.html
+2. https://www.cleverti.com/computer-science/strongly-vs-weakly-typed-languages/ 
+3. https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/
+

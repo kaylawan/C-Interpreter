@@ -1,0 +1,98 @@
+Due:
+    test: 1/18/2023 @ 11:59pm
+    code: 1/20/2023 @ 11:59pm
+
+Objectives:
+~~~~~~~~~~~
+
+    - Become familiar with the assignment submission environment
+    - Become familiar with build tools
+    - Start reading C++ programs
+    - Start writing C programs
+
+Assignment:
+~~~~~~~~~~~
+
+    - Port an interpreter for a simple language from C++ to C
+    - Donate a test case
+
+The language (it's a stretch to call it that):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The language has no formal definition. It is defined by the given interpreter
+
+Here is a quick overview:
+
+   - all values are encoded as 64 bit unsigned binary numbers
+   - 2 statements:
+
+       print <expression>      // prints the value of the expression
+                               // as a 64 bit unsigned quantity
+
+       <identifier> = <expression> // assign the value of the expression
+                                   // to the identifier
+
+    - operators are +, -, *, /, %. Same precedence, associativity, and
+      semantics as C
+
+    - '(' and ')' are used to change precedence
+
+    - identifiers must start with an alphabetic character and contain
+      alphanumeric characters
+
+Important files:
+~~~~~~~~~~~~~~~~
+
+    *.c     C files, feel free to add them, remove them, edit them, etc.
+    *.cxx   C++ files, your job is to get rid of all of them
+    *.h     header files, feel free to add them, remove them, edit them, etc.
+
+How to add your test:
+~~~~~~~~~~~~~~~~~~~~~
+
+    To add your test, create 2 files:
+
+       <your CSID>.fun     contains the fun program
+       <your CSID>.ok      contains the expected output
+
+    Don't forget to commit them to git (for example):
+
+       git add <your CSID>.fun <your CSID>.ok # add the files
+       git commit -a -m "added test"          # commit your change locally
+       git push                               # push to server
+    
+Generated files:
+~~~~~~~~~~~~~~~~
+
+    for each test:
+
+        <test>.out    output from running the test
+        <test>.diff   differences between the actual and expected output
+        <test>.result pass/fail
+
+To get notifications (will be sent to <your csid>@cs.utexas.edu):
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add an empty file named "spamon" in your project directory. Don't forget
+to "git add", "git commit", "git push"
+
+To run tests:
+~~~~~~~~~~~~~
+
+    make test
+
+To make the output less noisy:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    make -s test
+
+To run one test
+~~~~~~~~~~~~~~~
+
+    make -s t0.test
+
+To run by hand
+~~~~~~~~~~~~~~
+
+    ./p1 < t0.fun
+

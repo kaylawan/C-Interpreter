@@ -1,98 +1,24 @@
-Due:
-    test: 1/18/2023 @ 11:59pm
-    code: 1/20/2023 @ 11:59pm
+Fun Language Compiler
+Date: May 2023
 
-Objectives:
-~~~~~~~~~~~
+This C program serves as a robust compiler for the specialized "fun" language. It offers a wide array of features like support for arithmetic expressions, logic operators (following the same precedence and semantics of C), dynamic loops, and adept management of both local and global identifiers. Our implementation employs an abstract syntax tree to parse input from the “fun” program and output the compiled result as x86-64 assembly to stdout. Additionally, we've built an interpreter for the direct execution of "fun" program instructions, offering greater flexibility and a high-performance runtime environment.
 
-    - Become familiar with the assignment submission environment
-    - Become familiar with build tools
-    - Start reading C++ programs
-    - Start writing C programs
+Objectives
+•Part 1: Create a simple interpreter that translates and reads "fun" language code, then returns the output to stdout.
+•Part 2: Reads a "fun" program from stdin, producing the compiled x86-64 assembly to stdout.
 
-Assignment:
-~~~~~~~~~~~
+About the Language
+•While it may a stretch to label it as a "language", it has no formal definition and is described by the provided interpreter. Here's a brief overview:
 
-    - Port an interpreter for a simple language from C++ to C
-    - Donate a test case
+•All values are represented as 64-bit unsigned binary numbers.
+•The language supports two main statements:
+•print <expression>: Outputs the value of the expression as a 64-bit unsigned figure.
+•<identifier> = <expression>: Assigns the expression's value to the given identifier.
+•Supported operators include +, -, *, /, %. They share the same precedence, associativity, and semantics with C.
+•Use '(' and ')' to alter precedence.
+•Identifiers should commence with an alphabetical character and comprise alphanumeric characters.
 
-The language (it's a stretch to call it that):
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The language has no formal definition. It is defined by the given interpreter
-
-Here is a quick overview:
-
-   - all values are encoded as 64 bit unsigned binary numbers
-   - 2 statements:
-
-       print <expression>      // prints the value of the expression
-                               // as a 64 bit unsigned quantity
-
-       <identifier> = <expression> // assign the value of the expression
-                                   // to the identifier
-
-    - operators are +, -, *, /, %. Same precedence, associativity, and
-      semantics as C
-
-    - '(' and ')' are used to change precedence
-
-    - identifiers must start with an alphabetic character and contain
-      alphanumeric characters
-
-Important files:
-~~~~~~~~~~~~~~~~
-
-    *.c     C files, feel free to add them, remove them, edit them, etc.
-    *.cxx   C++ files, your job is to get rid of all of them
-    *.h     header files, feel free to add them, remove them, edit them, etc.
-
-How to add your test:
-~~~~~~~~~~~~~~~~~~~~~
-
-    To add your test, create 2 files:
-
-       <your CSID>.fun     contains the fun program
-       <your CSID>.ok      contains the expected output
-
-    Don't forget to commit them to git (for example):
-
-       git add <your CSID>.fun <your CSID>.ok # add the files
-       git commit -a -m "added test"          # commit your change locally
-       git push                               # push to server
-    
-Generated files:
-~~~~~~~~~~~~~~~~
-
-    for each test:
-
-        <test>.out    output from running the test
-        <test>.diff   differences between the actual and expected output
-        <test>.result pass/fail
-
-To get notifications (will be sent to <your csid>@cs.utexas.edu):
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Add an empty file named "spamon" in your project directory. Don't forget
-to "git add", "git commit", "git push"
-
-To run tests:
-~~~~~~~~~~~~~
-
-    make test
-
-To make the output less noisy:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    make -s test
-
-To run one test
-~~~~~~~~~~~~~~~
-
-    make -s t0.test
-
-To run by hand
-~~~~~~~~~~~~~~
-
-    ./p1 < t0.fun
-
+Important Files
+*.c: C files; edit, add or remove as needed.
+*.cxx: C++ files; your mission is to phase them out.
+*.h: Header files; feel free to manipulate them.

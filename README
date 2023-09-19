@@ -1,6 +1,8 @@
 Fun Language Compiler
 Date: May 2023
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 This C program serves as a robust compiler for the specialized "fun" language. It offers a wide array of features like support for arithmetic expressions, logic operators (following the same precedence and semantics of C), dynamic loops, and adept management of both local and global identifiers. Our implementation employs an abstract syntax tree to parse input from the “fun” program and output the compiled result as x86-64 assembly to stdout. Additionally, we've built an interpreter for the direct execution of "fun" program instructions, offering greater flexibility and a high-performance runtime environment.
 
 Objectives

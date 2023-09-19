@@ -1,0 +1,26 @@
+- explain how you initialize the heap before the first malloc is called
+
+i actually don't initialize the heap before the first malloc is called LOL. 
+the heap is initalized the first time my_malloc is called. first_block 
+is initialized as null originally so malloc checks if it is null, and 
+if it is it means the heap hasn't been initialized yet. to initialize 
+the heap, we create the first block with a metadata about the memory 
+block where i initalize the size of the block as well as setting it to 
+free. now, the heap is initalized with its first memory block.
+
+- malloc and free are an integral part of the C runtime. Explain how we're able to replace them with our own implementation.
+
+We are able to replace malloc and free with our own implementation by 
+including our implementation in our program's source code and ensuring 
+that it is compiled and linked into our program instead of the standard
+ library implementation by undefining the orignal malloc and free 
+ functions. 
+
+- why did I resort to pre-processor trickery (e.g. #undef malloc,
+  #define malloc my_malloc, ...)? What are the alternatives?
+  
+  Pre-processor tricky was necessary to prevent us from cheating 
+  actually implementing malloc in free. If the original malloc/free 
+  were not undefined and redefined with our own implementation, an 
+  alternative solution would be that we could have just called the 
+  actual malloc() in my_malloc and same with calling free() in my_free(). 

@@ -1,0 +1,38 @@
+Due date:
+     Test: 2/24/2023 @ 11:59pm
+     Code: 2/26/2023 @ 11:59pm
+
+Objective:
+~~~~~~~~~~
+
+- Become better at working with memory and pointers in C
+
+Assignment:
+~~~~~~~~~~~
+
+- Implement your own malloc/free
+- Donate a test (<csid>.test, <csid>.ok)
+- Answer the questions in REPORT.txt
+
+Rules:
+~~~~~~
+
+- heap/heap.h declares 4 important variables:
+
+   - heap_size, contains the total heap size in bytes, defined by the test
+   - the_heap, the memory for the heap, defined by the test
+   - mCount, number of times malloc is called, defined and updated by heap.c
+   - fCount, number of times free is called, defined and updated by heap.c
+
+- Your implementation should only use the memory defined by "the_heap" to
+  implement the heap.
+
+
+Warning:
+~~~~~~~~
+
+- GCC is known to eliminate calls to functions that are known to
+  be pure (have no side observable side-effects)
+
+
+
